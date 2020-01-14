@@ -54,6 +54,7 @@ ln -s $(pwd)/fonts ~/.fonts
 # Reload things. Order matters, so
 # put things at the bottom
 #
-fc-cache -f -v ~/.fonts      # Reload font cash
-sudo chsh -s $(which zsh)    # Set default terminal as zsh
-i3-msg restart               # Reset i3
+fc-cache -f -v ~/.fonts  # Reload font cache
+sudo chsh -s $(which zsh)  # Set default terminal as zsh
+i3-msg restart  # Reset i3
+setxkbmap -layout us -option ctrl:nocaps  # Remap capslock to ctrl
