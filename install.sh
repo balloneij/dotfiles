@@ -16,6 +16,7 @@ PACKAGES=(
   feh
   vim
   i3
+  zsh
 )
 
 aptGetUpdated=false
@@ -39,6 +40,9 @@ ln -s $(pwd)/img/wallpapers ~/Pictures/wallpapers
 rm -f ~/.vimrc
 ln -s $(pwd)/.vimrc ~/.vimrc
 
+rm -f ~/.zshrc
+ln -s $(pwd)/.zshrc ~/.zshrc
+
 rm -f ~/.config/i3/config
 ln -s $(pwd)/config ~/.config/i3/config
 
@@ -50,5 +54,6 @@ ln -s $(pwd)/fonts ~/.fonts
 # Reload things. Order matters, so
 # put things at the bottom
 #
-fc-cache -f -v ~/.fonts
-
+fc-cache -f -v ~/.fonts      # Reload font cash
+sudo chsh -s $(which zsh)    # Set default terminal as zsh
+i3-msg restart               # Reset i3
