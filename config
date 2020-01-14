@@ -25,6 +25,18 @@ font pango: Cascadia Mono 10
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers
 
 #
+# i3 colors
+#
+#                       Border  Bg      Text    Indicator Child Border
+client.focused          #FFFFFF #F0F0F0 #0F0F0F #FFFFFF   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+#
 # Use Mouse+$mod to drag floating windows to their wanted position
 #
 floating_modifier $mod
@@ -192,4 +204,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
