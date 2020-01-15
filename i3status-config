@@ -1,0 +1,12 @@
+general {
+  output_format = "i3bar"
+  colors = true
+  color_good = "#198844"
+  color_degraded = "#FBA921"
+  color_bad = "#CC342B"
+}
+
+order += "tztime local"
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
