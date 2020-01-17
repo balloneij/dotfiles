@@ -39,6 +39,18 @@ for pkg in "${PACKAGES[@]}"; do
 done
 
 #
+# Install Beyond Compare <3
+#
+if ! [ -x "$(command -v bcompare)" ]
+then
+  wget https://www.scootersoftware.com/bcompare-4.3.3.24545_amd64.deb
+  sudo apt-get update
+  sudo apt-get install gdebi-core -y
+  sudo gdebi bcompare-4.3.3.24545_amd64.deb
+  rm -f bcompare*
+fi
+
+#
 # Symlinks
 #
 rm -fr ~/Pictures/wallpapers
